@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Example - Home</title>
+		<style id="page-styles">
+
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="navbar">
+			
+			</div>
+		</header>
+	
+		<main>
+	
+			<h1>Content</h1>
+			
+			<a href="/link">This will be loaded within the SPA</a>
+			<a href="/link2" data-internal>This will be loaded like a normal link, but it will force a complete refresh of the page. Useful for changing content in the header or footer when needed.</a>
+			<a href="https://www.example.com" data-external>Same function as data-internal, but I use it to filter links that access an outside webpage. Forced a page reload.</a>
+			
+			<!-- This goes on the bottom of main, code will be rearranged later -->
+			<section id="page-append">
+	
+				<section id="append-to-bottom">
+					<script>
+						function pageReady() {
+							conosle.log("This is called when the page is finished loading, instead of document.ready");
+						}
+					</script>
+				</section>
+	
+				<style class="custom-styles">
+					/* CSS here will be appended to <head> */
+				</style>
+	
+				<span id="page-title">Title</span>
+			</section>
+		</main>
+	
+		<footer>
+			
+		</footer>
+	</body>
+</html>
